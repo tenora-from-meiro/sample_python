@@ -53,6 +53,14 @@ except ImportError as e:
 except Exception as e:
     print(f"An error occurred during s3fs test: {e}")
 
+try:
+    import langchain
+    print("langchain imported successfully.")
+except ImportError as e:
+    print(f"Error importing langchain: {e}")
+except Exception as e:
+    print(f"An error occurred during langchain test: {e}")
+
 print("\n--- Test Complete ---")
 print("If you see 'imported successfully' for each library, it means they are installed and accessible.")
 print("For gcsfs and s3fs, successful import indicates the library is present, but full functionality")
